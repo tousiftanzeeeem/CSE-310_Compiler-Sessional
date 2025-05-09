@@ -1,0 +1,4 @@
+HashFunction,Collision Ratio
+SDBMHash,0.17
+DJB2Hash(Found at http://www.cse.yorku.ca/~oz/hash.html),0.10
+Pollynomial rolling(From Cp algorithm ),0.14

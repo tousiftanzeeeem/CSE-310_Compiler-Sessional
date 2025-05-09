@@ -1,0 +1,114 @@
+7
+I foo FUNCTION INT INT FLOAT INT
+I i VAR
+L i
+L i j
+L j
+S
+I 23 NUMBER
+I car STRUCT INT n_doors BOOL is_electric STRING brand
+I brand VAR 
+P C
+D i
+D j
+E
+S
+E
+S
+P A
+S
+I <= RELOP
+I == RELOP
+P A
+I >= RELOP
+P C
+I <= RELOP
+I foo STRUCT INT a FLOAT b
+P A
+D ==
+I foo VAR
+D 23
+D
+P A
+L 23
+S
+I x VAR
+I y VAR
+P A
+L foo
+E
+I num VAR
+I bicycle UNION INT n_gears BOOL is_hydrolic_brake STRING brand
+S
+I true BOOL
+L a
+P A
+E
+E
+E
+S
+P A
+I speed VAR
+I distance VAR
+I calculate FUNCTION FLOAT FLOAT FLOAT
+I result VAR
+I pi NUMBER
+I config STRUCT BOOL enabled INT retries
+I enabled VAR
+P A
+L speed distance
+S
+I count VAR
+I flag BOOL
+D flag
+L count
+S
+I size VAR
+I length VAR
+L length
+D size
+P A
+I sum FUNCTION INT INT
+I alpha VAR
+I beta VAR
+I gamma VAR
+S
+I config VAR
+I circle STRUCT FLOAT radius STRING color
+I color VAR
+I temp VAR
+P C
+I == RELOP
+I < RELOP
+P A
+I > RELOP
+P C
+I != RELOP
+I delta VAR
+I square STRUCT INT side
+S
+I engine UNION STRING type INT power
+I power VAR
+I is_available BOOL
+L is_available
+E
+I engine VAR
+P A
+D !=
+D square
+I torque VAR
+I print FUNCTION VOID STRING
+I msg VAR
+P A
+L msg
+S
+I user STRUCT STRING name INT age BOOL active
+L name
+L age
+D active
+E
+S
+I config_2 VAR
+P C
+E
+Q

@@ -1,0 +1,936 @@
+Line 1: type_specifier : INT
+
+int
+
+Line 2: type_specifier : INT
+
+int
+
+Line 2: declaration_list : declaration_list COMMA ID
+
+i
+
+Line 2 var_declaration: type_specifier declaration_list SEMICOLON
+
+int i;
+
+Line 2: statement : var_declaration
+
+int i;
+
+Line 2: statements : statement
+
+int i;
+
+
+Line 3: variable : ID
+
+i
+
+Line 3: factor : variable
+
+i
+
+Line 3: unary_expression : factor
+
+i
+
+Line 3: term : unary_expression
+
+i
+
+Line 3: simple_expression : term
+
+i
+
+Line 3: factor : CONST_INT
+
+0
+
+Line 3: unary_expression : factor
+
+0
+
+Line 3: term : unary_expression
+
+0
+
+Line 3: simple_expression : term
+
+0
+
+Line 3: rel_expression : simple_expression RELOP simple_expression
+
+i>0
+
+Line 3: variable : ID
+
+i
+
+Line 3: factor : variable
+
+i
+
+Line 3: unary_expression : factor
+
+i
+
+Line 3: term : unary_expression
+
+i
+
+Line 3: simple_expression : term
+
+i
+
+Line 3: factor : CONST_INT
+
+10
+
+Line 3: unary_expression : factor
+
+10
+
+Line 3: term : unary_expression
+
+10
+
+Line 3: simple_expression : term
+
+10
+
+Line 3: rel_expression : simple_expression RELOP simple_expression
+
+i<10
+
+Line 3: logic_expression : rel_expression LOGICOP rel_expression
+
+i>0||i<10
+
+Line 3: expression : logic expression
+
+i>0||i<10
+
+Line 4: variable : ID
+
+i
+
+Line 4: factor : CONST_INT
+
+100
+
+Line 4: unary_expression : factor
+
+100
+
+Line 4: term : unary_expression
+
+100
+
+Line 4: simple_expression : term
+
+100
+
+Line 4: rel_expression : simple_expression
+
+100
+
+Line 4: logic_expression : rel_expression
+
+100
+
+Line 4: expression : variable ASSIGNOP logic_expression
+
+i=100
+
+Line 4: expression_statement : expression SEMICOLON
+
+i=100;
+
+Line 4: statement : expression_statement
+
+i=100;
+
+Line 6: variable : ID
+
+i
+
+Line 6: factor : CONST_INT
+
+200
+
+Line 6: unary_expression : factor
+
+200
+
+Line 6: term : unary_expression
+
+200
+
+Line 6: simple_expression : term
+
+200
+
+Line 6: rel_expression : simple_expression
+
+200
+
+Line 6: logic_expression : rel_expression
+
+200
+
+Line 6: expression : variable ASSIGNOP logic_expression
+
+i=200
+
+Line 6: expression_statement : expression SEMICOLON
+
+i=200;
+
+Line 6: statement : expression_statement
+
+i=200;
+
+Line 6: statement : IF LPAREN expression RPAREN statement ELSE statement
+
+if (i>0||i<10)
+i=100;
+else
+i=200;
+
+Line 4: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+
+
+Line 7: statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+
+printf(i);
+
+Line 7: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+
+
+Line 8: variable : ID
+
+i
+
+Line 8: factor : variable
+
+i
+
+Line 8: unary_expression : factor
+
+i
+
+Line 8: term : unary_expression
+
+i
+
+Line 8: simple_expression : term
+
+i
+
+Line 8: factor : CONST_INT
+
+20
+
+Line 8: unary_expression : factor
+
+20
+
+Line 8: term : unary_expression
+
+20
+
+Line 8: simple_expression : term
+
+20
+
+Line 8: rel_expression : simple_expression RELOP simple_expression
+
+i>20
+
+Line 8: variable : ID
+
+i
+
+Line 8: factor : variable
+
+i
+
+Line 8: unary_expression : factor
+
+i
+
+Line 8: term : unary_expression
+
+i
+
+Line 8: simple_expression : term
+
+i
+
+Line 8: factor : CONST_INT
+
+30
+
+Line 8: unary_expression : factor
+
+30
+
+Line 8: term : unary_expression
+
+30
+
+Line 8: simple_expression : term
+
+30
+
+Line 8: rel_expression : simple_expression RELOP simple_expression
+
+i<30
+
+Line 8: logic_expression : rel_expression LOGICOP rel_expression
+
+i>20&&i<30
+
+Line 8: expression : logic expression
+
+i>20&&i<30
+
+Line 9: variable : ID
+
+i
+
+Line 9: factor : CONST_INT
+
+300
+
+Line 9: unary_expression : factor
+
+300
+
+Line 9: term : unary_expression
+
+300
+
+Line 9: simple_expression : term
+
+300
+
+Line 9: rel_expression : simple_expression
+
+300
+
+Line 9: logic_expression : rel_expression
+
+300
+
+Line 9: expression : variable ASSIGNOP logic_expression
+
+i=300
+
+Line 9: expression_statement : expression SEMICOLON
+
+i=300;
+
+Line 9: statement : expression_statement
+
+i=300;
+
+Line 11: variable : ID
+
+i
+
+Line 11: factor : CONST_INT
+
+400
+
+Line 11: unary_expression : factor
+
+400
+
+Line 11: term : unary_expression
+
+400
+
+Line 11: simple_expression : term
+
+400
+
+Line 11: rel_expression : simple_expression
+
+400
+
+Line 11: logic_expression : rel_expression
+
+400
+
+Line 11: expression : variable ASSIGNOP logic_expression
+
+i=400
+
+Line 11: expression_statement : expression SEMICOLON
+
+i=400;
+
+Line 11: statement : expression_statement
+
+i=400;
+
+Line 11: statement : IF LPAREN expression RPAREN statement ELSE statement
+
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+
+Line 9: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+
+
+Line 12: statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+
+printf(i);
+
+Line 12: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+
+
+Line 13: variable : ID
+
+i
+
+Line 13: factor : variable
+
+i
+
+Line 13: unary_expression : factor
+
+i
+
+Line 13: term : unary_expression
+
+i
+
+Line 13: simple_expression : term
+
+i
+
+Line 13: factor : CONST_INT
+
+40
+
+Line 13: unary_expression : factor
+
+40
+
+Line 13: term : unary_expression
+
+40
+
+Line 13: simple_expression : term
+
+40
+
+Line 13: rel_expression : simple_expression RELOP simple_expression
+
+i>40
+
+Line 13: variable : ID
+
+i
+
+Line 13: factor : variable
+
+i
+
+Line 13: unary_expression : factor
+
+i
+
+Line 13: term : unary_expression
+
+i
+
+Line 13: simple_expression : term
+
+i
+
+Line 13: factor : CONST_INT
+
+50
+
+Line 13: unary_expression : factor
+
+50
+
+Line 13: term : unary_expression
+
+50
+
+Line 13: simple_expression : term
+
+50
+
+Line 13: rel_expression : simple_expression RELOP simple_expression
+
+i<50
+
+Line 13: logic_expression : rel_expression LOGICOP rel_expression
+
+i>40&&i<50
+
+Line 13: expression : logic expression
+
+i>40&&i<50
+
+Line 13: factor : LPAREN expression RPAREN
+
+(i>40&&i<50)
+
+Line 13: unary_expression : factor
+
+(i>40&&i<50)
+
+Line 13: term : unary_expression
+
+(i>40&&i<50)
+
+Line 13: simple_expression : term
+
+(i>40&&i<50)
+
+Line 13: rel_expression : simple_expression
+
+(i>40&&i<50)
+
+Line 13: variable : ID
+
+i
+
+Line 13: factor : variable
+
+i
+
+Line 13: unary_expression : factor
+
+i
+
+Line 13: term : unary_expression
+
+i
+
+Line 13: simple_expression : term
+
+i
+
+Line 13: factor : CONST_INT
+
+60
+
+Line 13: unary_expression : factor
+
+60
+
+Line 13: term : unary_expression
+
+60
+
+Line 13: simple_expression : term
+
+60
+
+Line 13: rel_expression : simple_expression RELOP simple_expression
+
+i<60
+
+Line 13: variable : ID
+
+i
+
+Line 13: factor : variable
+
+i
+
+Line 13: unary_expression : factor
+
+i
+
+Line 13: term : unary_expression
+
+i
+
+Line 13: simple_expression : term
+
+i
+
+Line 13: factor : CONST_INT
+
+70
+
+Line 13: unary_expression : factor
+
+70
+
+Line 13: term : unary_expression
+
+70
+
+Line 13: simple_expression : term
+
+70
+
+Line 13: rel_expression : simple_expression RELOP simple_expression
+
+i>70
+
+Line 13: logic_expression : rel_expression LOGICOP rel_expression
+
+i<60&&i>70
+
+Line 13: expression : logic expression
+
+i<60&&i>70
+
+Line 13: factor : LPAREN expression RPAREN
+
+(i<60&&i>70)
+
+Line 13: unary_expression : factor
+
+(i<60&&i>70)
+
+Line 13: term : unary_expression
+
+(i<60&&i>70)
+
+Line 13: simple_expression : term
+
+(i<60&&i>70)
+
+Line 13: rel_expression : simple_expression
+
+(i<60&&i>70)
+
+Line 13: logic_expression : rel_expression LOGICOP rel_expression
+
+(i>40&&i<50)||(i<60&&i>70)
+
+Line 13: expression : logic expression
+
+(i>40&&i<50)||(i<60&&i>70)
+
+Line 14: variable : ID
+
+i
+
+Line 14: factor : CONST_INT
+
+500
+
+Line 14: unary_expression : factor
+
+500
+
+Line 14: term : unary_expression
+
+500
+
+Line 14: simple_expression : term
+
+500
+
+Line 14: rel_expression : simple_expression
+
+500
+
+Line 14: logic_expression : rel_expression
+
+500
+
+Line 14: expression : variable ASSIGNOP logic_expression
+
+i=500
+
+Line 14: expression_statement : expression SEMICOLON
+
+i=500;
+
+Line 14: statement : expression_statement
+
+i=500;
+
+Line 16: variable : ID
+
+i
+
+Line 16: factor : CONST_INT
+
+600
+
+Line 16: unary_expression : factor
+
+600
+
+Line 16: term : unary_expression
+
+600
+
+Line 16: simple_expression : term
+
+600
+
+Line 16: rel_expression : simple_expression
+
+600
+
+Line 16: logic_expression : rel_expression
+
+600
+
+Line 16: expression : variable ASSIGNOP logic_expression
+
+i=600
+
+Line 16: expression_statement : expression SEMICOLON
+
+i=600;
+
+Line 16: statement : expression_statement
+
+i=600;
+
+Line 16: statement : IF LPAREN expression RPAREN statement ELSE statement
+
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+
+Line 14: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+
+
+Line 17: statement : PRINTLN LPAREN ID RPAREN SEMICOLON
+
+printf(i);
+
+Line 17: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+printf(i);
+
+
+Line 19: factor : CONST_INT
+
+0
+
+Line 19: unary_expression : factor
+
+0
+
+Line 19: term : unary_expression
+
+0
+
+Line 19: simple_expression : term
+
+0
+
+Line 19: rel_expression : simple_expression
+
+0
+
+Line 19: logic_expression : rel_expression
+
+0
+
+Line 19: expression : logic expression
+
+0
+
+Line 19: statement : RETURN expression SEMICOLON
+
+return 0;
+
+
+Line 19: statements : statements statement
+
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+printf(i);
+return 0;
+
+
+Line 20: compound_statement : LCURL statements RCURL
+
+{
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+printf(i);
+return 0;
+}
+
+ScopeTable # 2
+0--> < i , ID > 
+ScopeTable # 1
+6--> < main , ID > 
+
+Line 20: func_definition : type_specifier ID LPAREN  RPAREN compound_statement
+
+int main()
+{
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+printf(i);
+return 0;
+}
+
+Line 20 unit : func_definition
+
+int main()
+{
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+printf(i);
+return 0;
+}
+
+
+Line 20: program : program unit
+
+int main()
+{
+int i;
+if (i>0||i<10)
+i=100;
+else
+i=200;
+printf(i);
+if (i>20&&i<30)
+i=300;
+else
+i=400;
+printf(i);
+if ((i>40&&i<50)||(i<60&&i>70))
+i=500;
+else
+i=600;
+printf(i);
+return 0;
+}
+
